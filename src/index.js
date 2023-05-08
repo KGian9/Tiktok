@@ -1,9 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
-import "./index.scss";
-import App from "./App";
+import App from "~/App";
 import ReactDOM from "react-dom/client";
 import reportWebVitals from "./reportWebVitals";
+import GlobalStyle from "./components/Global";
 
 //* Fake Comments bài fake chat app
 // function emitComments(id) {
@@ -24,9 +24,9 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <React.StrictMode>
-    <Router>
+    <GlobalStyle>
       <App />
-    </Router>
+    </GlobalStyle>
   </React.StrictMode>
 );
 
