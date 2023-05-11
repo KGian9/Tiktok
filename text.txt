@@ -1,12 +1,5 @@
-"start": "react-scripts start",
-"build": "react-scripts build",
-{
-  "src": "./logo192.png",
-  "type": "image/png",
-  "sizes": "192x192"
-},
-{
-  "src": "./logo512.png",
-  "type": "image/png",
-  "sizes": "512x512"
-}
+các bước tổng quát xây dựng trang web
+
+b1: phân tích trang web và các trang con, nhằm lấy đc số lượng trang
+b2: phân tích layout của từng trang, lấy ra các layout đc dùng chung, dùng lại, dùng riêng
+b3: phân tích kích thước các thành phần trong trang web

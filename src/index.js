@@ -3,7 +3,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import App from "~/App";
 import ReactDOM from "react-dom/client";
 import reportWebVitals from "./reportWebVitals";
-import GlobalStyle from "./components/Global";
+import GlobalStyle from "./components/GlobalStyles";
 
 //* Fake Comments bài fake chat app
 // function emitComments(id) {
