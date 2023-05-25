@@ -2,14 +2,7 @@ import { faEllipsisVertical } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Tippy from "@tippyjs/react";
 import classNames from "classnames/bind";
-
-import Button from "~/components/Button";
-import styles from "./Header.module.scss";
-import "tippy.js/dist/tippy.css";
-import Image from "~/components/Image";
-import Images from "~/assets/images";
-import Menu from "~/components/Popper/Menu";
-import Search from "../Search";
+import { Link } from "react-router-dom";
 import {
   CoinsIcon,
   HelpIcon,
@@ -23,6 +16,15 @@ import {
   UploadIcon,
   UserIcon,
 } from "~/components/Icons";
+
+import routesConfig from "~/config/routes";
+import Button from "~/components/Button";
+import styles from "./Header.module.scss";
+import "tippy.js/dist/tippy.css";
+import Image from "~/components/Image";
+import Images from "~/assets/images";
+import Menu from "~/components/Popper/Menu";
+import Search from "../Search";
 
 const cx = classNames.bind(styles);
 
@@ -102,7 +104,9 @@ function Header() {
     <header className={cx("wrapper")}>
       <div className={cx("inner")}>
         <div className={cx("logo")}>
-          <img src={Images.logo} alt="Tiktok" />
+          <Link to={routesConfig.home}>
+            <img src={Images.logo} alt="Tiktok" />
+          </Link>
         </div>
 
         <Search />
@@ -135,6 +139,7 @@ function Header() {
               <Button primary>Log in</Button>
             </>
           )}
+
           <Menu
             items={currentUser ? userMenu : MENU_ITEMS}
             onChange={handleMenuChange}
