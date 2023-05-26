@@ -57,7 +57,7 @@ function Menu({
                 }}
               />
             )}
-            {renderItems()}
+            <div className={cx("menu-language")}>{renderItems()}</div>
           </PopperWrapper>
         </div>
       )}
