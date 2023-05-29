@@ -17,7 +17,7 @@ import {
   UserIcon,
 } from "~/components/Icons";
 
-import routesConfig from "~/config/routes";
+import config from "~/config/index.js";
 import Button from "~/components/Button";
 import styles from "./Header.module.scss";
 import "tippy.js/dist/tippy.css";
@@ -104,7 +104,7 @@ function Header() {
     <header className={cx("wrapper")}>
       <div className={cx("inner")}>
         <div className={cx("logo")}>
-          <Link to={routesConfig.home}>
+          <Link to={config.routes.home}>
             <img src={Images.logo} alt="Tiktok" />
           </Link>
         </div>

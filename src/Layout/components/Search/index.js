@@ -6,7 +6,7 @@ import { Wrapper as PopperWrapper } from "~/components/Popper";
 
 import { useDebounce } from "~/hooks";
 import styles from "./Search.module.scss";
-import * as searchServices from "~/apiServices/searchServices";
+import * as searchServices from "~/Services/searchServices";
 import { ClearIcon, LoadingIcon, SearchIcon } from "~/components/Icons";
 
 const cx = classNames.bind(styles);
