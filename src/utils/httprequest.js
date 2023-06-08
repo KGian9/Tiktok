@@ -5,7 +5,14 @@ const request = axios.create({
 });
 
 export const get = async (path, options = {}) => {
-  const response = await request.get(path, options);
+  const config = {
+    ...options,
+    headers: {
+      ...options.headers,
+    },
+  };
+
+  const response = await request.get(path, config);
   return response.data;
 };
 

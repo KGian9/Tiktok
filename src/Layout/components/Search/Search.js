@@ -32,7 +32,7 @@ function Search() {
 
       const result = await searchServices.search(debouncedValue);
 
-      setSearchResult(result);
+      setSearchResult(typeof result === "object" ? [result] : result);
       setLoading(false);
     };
 
@@ -56,7 +56,6 @@ function Search() {
     }
   };
 
-  // (e) => setSearchValue(e.target.value)
   return (
     // Tippy error
     // Using a wrapper <div> or <span> tag around the reference element solves this by creating a new parentNode context.
@@ -69,8 +68,11 @@ function Search() {
           <div className={cx("search-result")} tabIndex="-1" {...attrs}>
             <PopperWrapper>
               <h4 className={cx("search-title")}>Accounts</h4>
-              {searchResult.map((result) => (
-                <AccountItem key={result.id} data={result} />
+              {searchResult.map((result, index) => (
+                <AccountItem
+                  key={result[index].user.id}
+                  data={result[index].user}
+                />
               ))}
             </PopperWrapper>
           </div>

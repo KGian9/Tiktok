@@ -1,0 +1,28 @@
+--API từ f8--
+https://tiktok.fullstack.edu.vn/api/
+
+--API từ RapidAPI--
+https://tiktok-video-no-watermark2.p.rapidapi.com/user/search
+
+const axios = require('axios');
+
+const options = {
+  method: 'GET',
+  url: 'https://tiktok-video-no-watermark2.p.rapidapi.com/user/search',
+  params: {
+    keywords: 'tiktok',
+    count: '10',
+    cursor: '0'
+  },
+  headers: {
+    'X-RapidAPI-Key': 'a4dd86eb2fmshe7e6325f9ff6d3ep19a868jsn1ca9becd964b',
+    'X-RapidAPI-Host': 'tiktok-video-no-watermark2.p.rapidapi.com'
+  }
+};
+
+try {
+	const response = await axios.request(options);
+	console.log(response.data);
+} catch (error) {
+	console.error(error);
+}
