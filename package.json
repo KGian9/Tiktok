@@ -1,6 +1,7 @@
 {
   "name": "tiktok",
   "version": "0.1.0",
+  "homepage": "https://kgian9.github.io/Tiktok/",
   "private": true,
   "dependencies": {
     "@babel/core": "^7.21.4",
@@ -30,7 +31,9 @@
     "test": "react-app-rewired test",
     "eject": "react-scripts eject",
     "start": "react-app-rewired start",
-    "build": "react-app-rewired build"
+    "build": "react-app-rewired build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -54,6 +57,7 @@
     "babel-plugin-module-resolver": "^5.0.0",
     "css-loader": "^6.7.3",
     "customize-cra": "^1.0.0",
+    "gh-pages": "^5.0.0",
     "html-webpack-plugin": "^5.5.1",
     "react-app-rewired": "^2.2.1",
     "sass": "^1.62.1",

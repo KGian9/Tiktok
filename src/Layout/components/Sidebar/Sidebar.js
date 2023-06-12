@@ -14,6 +14,7 @@ import {
   LiveIconActive,
 } from "~/components/Icons";
 import SuggestedAccounts from "~/components/SuggestedAccounts";
+import Footer from "./Footer/Footer";
 
 const cx = classNames.bind(styles);
 
@@ -54,6 +55,10 @@ function Sidebar() {
 
         <div className={cx("following-account")}>
           <SuggestedAccounts label="Following accounts" />
+        </div>
+
+        <div className={cx("footer-sidebar")}>
+          <Footer />
         </div>
       </Menu>
     </aside>
